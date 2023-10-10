@@ -1,10 +1,10 @@
 ---
 title: API Deprecation Guidance
-weight: 55
+weight: 70
 ---
 
 
-# API lifecycle & deprecation
+# API lifecycle and deprecation
 
 Each MTD API follows a lifecycle from the point where it is first published to the point where it is retired.
 
