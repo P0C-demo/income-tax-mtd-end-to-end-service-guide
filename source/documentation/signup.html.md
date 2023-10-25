@@ -1,31 +1,57 @@
 ---
 title: Sign up
-weight: 5
+weight: 10
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 # Sign up
 
-## Agent
+## Signing up to Making Tax Digital for Income Tax
 
-Before agents can sign up clients to Making Tax Digital they must:
+Sign up via API has been ruled out for security reasons.
+
+Taxpayers can sign up for Making Tax Digital for Income Tax without having software in place. However, they must get and authorise [software](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/index.html#software-choices) before they start using Making Tax Digital for Income Tax.
+
+To use Making Tax Digital for Income Tax, individuals need to sign up first.
+
+To sign up, a user must:
+
+- Be a sole trader (self-employed) and/or
+- Have income from property, either in the UK or abroad
+
+See [Sign up as an individual for Making Tax Digital for Income Tax](https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax) for more information.
+
+If an individual is a self employed partner in a partnership, they do not need to sign up to MTD ITSA unless they have other MTD qualifying income such as:
+
+- They are also a self employed sole trader
+- They receive UK or foreign property income
+
+If this is the case, the individual must not include either their partner or partnership business details in the sign up service. Instead, this income will continue to be submitted as part of their self assessment tax return.  There is no requirement at this time to submit partner or partnership income quarterly to HMRC.
+
+A user can also get their appointed tax agent (for instance, an accountant or bookkeeper) to sign up on their behalf, with their permission.
+
+We advise customers to speak to their agent (if they have one) before choosing software to ensure that it is compatible.
+
+## Agent sign-up
+
+Before agents can sign up clients to Making Tax Digital, they must:
 
 * [Create an agent services account](https://www.gov.uk/guidance/get-an-hmrc-agent-services-account)
-* Have authorisation in place from their clients. Existing relationships can be copied from Self Assessment, or agents can ask for relationships for new clients. Both of these tasks can be done using their [agent services account](https://www.gov.uk/guidance/sign-in-to-your-agent-services-account).
+* Have authorisation in place from their clients. Existing authorisations can be copied from Self Assessment, or agents can request authorisation for new clients. Both of these tasks can be done using their [agent services account](https://www.gov.uk/guidance/sign-in-to-your-agent-services-account).
 
 For more information, visit:
 
 [Making Tax Digital for Income Tax as an agent: step by step](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-as-an-agent-step-by-step)
 
-## Individual
+## Individual sign-up
 
-Individuals who are self employed and/or have property income can sign themselves up to Making Tax Digital for Income Tax.
+Individuals who are self employed and/or have property income can sign themselves up for Making Tax Digital for Income Tax.
 
 For more information, visit:
 
 [Making Tax Digital for Income Tax for individuals: step by steps](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-for-businesses-step-by-step)
 
-## Link software to HMRC
+## Linking software to HMRC
 
 Businesses and agents using your software to connect to the [Income Tax (Making Tax Digital) APIs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax) must grant authority to your software to interact with HMRC on their behalf. We use the open standard [OAuth 2.0](https://oauth.net/2/) (opens in a new tab), which involves the business or agent signing in via their Government Gateway account and following the grant authority user journey.
  
@@ -43,7 +69,7 @@ Businesses and agents using your software to connect to the [Income Tax (Making 
 8.	HMRC generates an OAuth token for the business or agent.
 9.	Your software stores the business or agent’s OAuth token for later use in API calls on their behalf.
 
-Business and agents authenticate directly with us using their Government Gateway user ID and password, and grant the software the authority to interact with HMRC on their behalf. They grant this for a set of functions called API scopes which are required for each ITSA (MTD) endpoint.
+Businesses and agents authenticate directly with us using their Government Gateway user ID and password, and grant the software the authority to interact with HMRC on their behalf. They grant this for a set of functions called API scopes which are required for each ITSA (MTD) endpoint.
 
 In the case of agents, they must sign in to their Government Gateway account with the user ID and password for their new agent services account, which was generated as part of the agent services account journey.
 

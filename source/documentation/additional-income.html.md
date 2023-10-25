@@ -1,18 +1,18 @@
 ---
-title: Additional Income | Income Tax (MTD) End-to-End Service Guide
-weight: 30
+title: Non-mandated income | Income Tax (MTD) End-to-End Service Guide
+weight: 25
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
-# Additional Income
+# Non-mandated income
 
 ## Submit information about personal income
 ### Self-assessment return
 
 The software should prompt customers to make sure they have considered the following potential additional income sources (there are links to the APIs where the functionality is available, we will continue to release additional functionality and update this page).
 
-* any income from [bank or building society interest](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/UK-Savings-Account) (supported in live)
-* any income from [dividends](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Dividends-Income) (supported in live)  
+* any income from [bank or building society interest](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account) (supported in live)
+* any income from [dividends](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Dividends-Income) (supported in live)  
 *	any [gift aid contributions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0/oas/page#tag/Charitable-Givings) they have made (supported in live)  
 *	any pension contributions
 *	any pension income
@@ -62,13 +62,13 @@ These endpoints can be broken into three categories:
 
 [Delete Employment Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Employments/paths/~1individuals~1income-received~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/delete)
 
-[Create and Amend Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/put)
+[Create and Amend Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/put)
 
-[Retrieve Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/get)
+[Retrieve Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/get)
 
-[Delete Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+[Delete Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-[Ignore Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1ignore/post)
+[Ignore Employment Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Employment-Expenses/paths/~1individuals~1expenses~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1ignore/post)
 HMRC will pre-populate the employment information provided by employers. The user should check and correct the information, as necessary, prior to final declaration.
 
 **Note:**
@@ -305,9 +305,9 @@ These endpoints allow the user to manage their data related to expenses income f
 
 The user can submit details of their expenses income for a specific tax year, as well as amend submissions already made.  They also have the option to delete previous submissions, and to retrieve the information they have previously submitted.
 
-* [Retrieve Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/get)
-* [Create and Amend Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/put)
-* [Delete Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+* [Retrieve Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/get)
+* [Create and Amend Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/put)
+* [Delete Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/2.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
 <a href="figures/expenses-other.svg" target="blank">
 <img src="figures/expenses-other.svg" alt=" " style="width:720px;" />
@@ -384,4 +384,46 @@ These resources allow software packages to provide a customer's financial data f
 * update an existing brought forward loss
 
 To carry-back a loss, the customer should contact HMRC who will be able to apply this manually.
+
+<!--- Section owner: MTD Programme --->
+
+## Capital Gains Tax
+
+Capital Gains Tax is a tax on the profit when you sell or dispose of an asset that’s increased in value.
+
+From the 6th April 2020, a user selling a residential property in the UK must report and pay Capital Gains Tax. This must be done within 30 days of the sale.
+
+These endpoints allow a user to create, retrieve, delete or amend Capitals Gains income.
+
+Use these endpoints for Capitals Gains income from residential property disposals:
+
+* [Retrieve All CGT Residential Property Disposals and Overrides (Includes PPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/get)
+
+* [Create and Amend CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/put)
+
+* [Delete CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+* [Create and Amend ‘Report and Pay Capital Gains Tax on Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D~1ppd/put)
+
+* [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D~1ppd/delete)
+
+Use these endpoints for other Capital Gains and disposals:
+
+* [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/get)
+
+* [Create and Amend Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/put)
+
+* [Delete Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+<!--- Section owner: MTD Programme --->
+
+## Marriage Allowance
+
+Marriage Allowance allows the user to transfer £1,260 of their Personal Allowance to their husband, wife or civil partner.
+
+This reduces the recipient’s tax by up to £252 in the tax year (6 April to 5 April the next year).
+
+To create a Marriage Allowance claim the recipients name, date of birth and NINO must be provided.
+
+Use the [Create Marriage Allowance](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Marriage-Allowance/paths/~1individuals~1disclosures~1marriage-allowance~1%7Bnino%7D/post) endpoint in the [Individuals Disclosures API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/).
 
