@@ -1,12 +1,12 @@
 ---
-title: Service ecosystem
+title: Software development
 weight: 5
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
-# Service ecosystem
+# Software development
 
-## Software provider overview
+## Software providers
 
 HMRC expects software providers to offer customers a streamlined end-to-end journey, and as far as possible, to support all the things the customers need to do to comply with their MTD for ITSA obligations. This will include the ability to finalise the overall tax position using software.
 
@@ -24,7 +24,7 @@ In order to be granted production credentials for a bridging product, it must be
 
 Software products who wish to selectively use Making Tax Digital for Income Tax APIs and not build a Making Tax Digital product will have to submit a business case, justifying use of a particular or multiple API’s. Such products may be granted production credentials at HMRC discretion.
 
-## Production approvals process for Making Tax Digital for Income Tax Self Assessment
+## Production approvals process
 
 Our key objectives for MTD for Income Tax are to:
 
