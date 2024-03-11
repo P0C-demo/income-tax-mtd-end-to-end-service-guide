@@ -1,4 +1,4 @@
-# Income Tax (Making Tax Digital) end-to-end service guide
+# Overview of the Service Guide
 
 **Version 3.8** issued January 2024
 
