@@ -37,8 +37,7 @@ jobs:
         run: |
           cd src/income-tax-mtd-end-to-end-service-guide/build
           if git diff --exit-code --quiet .; then
-            echo "No changes found"
-            exit 78
+            echo "No changes found"  
           fi
       - name: Retrieve markup files
         if: steps.check_changes.outputs.result != 'No changes found'
