@@ -45,10 +45,7 @@ jobs:
       - name: Retrieve markup files
         if: steps.check_changes.outputs.result != 'No changes found'
         run: |
-          cp -r src/income-tax-mtd-end-to-end-service-guide/build/* dest/P0C-demo.github.io/
-      - name: Commit and push if changes
-        if: steps.check_changes.outputs.result != 'No changes found'
-        run: |
+          cp -r src/income-tax-mtd-end-to-end-service-guide/build/* dest/P0C-demo.github.io/     |
           cd dest/P0C-demo.github.io
           git config user.name "Github.Action"
           git config user.email "deliverablestangible@gmail.com"
