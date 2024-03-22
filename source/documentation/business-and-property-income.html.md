@@ -1,12 +1,12 @@
 ---
-title: Business and Property Income
+title: Business and property income | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 4
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Business and Property Income
+# Business and property income
 
 A customer’s MTD mandated income consists of the following:
 
@@ -231,10 +231,6 @@ The adjustments should be submitted as a positive or negative amount. For exampl
 | --- | --- | --- | --- | --- | --- |
 | premisesRunningCosts | 500 | 25 | 525 | 23 | 523 |
 | travelCosts | 600 | -17 | 583 | -20 | 580 |
-
-<a href="figures/bsas.svg" target="blank"><img src="figures/bsas.svg" alt="BSAS (Business Source Adjustable Summary) diagram" style="width:720px;" /></a>
-
-<a href="figures/bsas.svg" target="blank">Open the BSAS diagram in a new tab</a>.
 
 To make an accounting adjustment, the software needs to call the [Trigger a Business Source Adjustable Summary](/api-documentation/docs/api/service/self-assessment-bsas-api/4.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1{nino}~1trigger/post) endpoint to receive the Calculation ID. The software will need to provide this Calculation ID when submitting any adjustments to HMRC using the following endpoints:
 
