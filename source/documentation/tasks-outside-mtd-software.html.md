@@ -1,12 +1,17 @@
 ---
-title: HMRC online services | Income Tax (Making Tax Digital) end-to-end service guide
-weight: 9
+title: Tasks outside MTD software | Income Tax (Making Tax Digital) end-to-end service guide
+weight: 6
 description: Sign in to HMRC online services to manage your income tax.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# HMRC online services
+# Tasks outside MTD software
+
+(Content needed)
+
+## HMRC online services
+
 Self-assessment customers who have signed up for Making Tax Digital for Income Tax can [sign into HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services) to access relevant services. Customers can reach their Making Tax Digital account by clicking the **Making Tax Digital for Income Tax** link.
 
 Software providers need to design a customer journey between software and HMRC online services. Whenever the journey takes the customer to HMRC online services, the service should open in a new browser window. This will allow customers to complete additional tasks not available in the software.
@@ -42,11 +47,11 @@ Agents will be able to access Making Tax Digital for Income Tax services through
 - changing their client’s contact preference
 - setting up a time-to-pay arrangement or budget payment plan
 
-## Changing contact preference between paper and digital secure messages
+### Changing contact preference
 
 To make MTD communication accessible to all customers, HMRC has provided them with a contact preference for paper or digital methods.  If customers have selected a digital preference, they will be able to view communications sent to them by HMRC through a secure mailbox accessible through HMRC online services.  HMRC encourages customers to sign up for digital messages as they will get reminders for when to make different updates and payments, which is not available through paper messages. 
 
-## Adding new business details for a self-employment sole trader or property business
+### Adding new business details for a self-employment sole trader or property business
 
 New self-employment and property businesses can be added using HMRC online services as soon as the business has started. Customers will have a grace period of up to 2 years before the business is included in MTD if the total qualifying income from all business income is over the MTD threshold.  If a customer adds the new business within the 2-year grace period, they can choose to bring it into MTD immediately and commence voluntary quarterly updates or can decide to keep it outside of MTD and submit the income annually after the year end as normal on their SA return.
 
@@ -64,7 +69,7 @@ Customers need to provide the following information to add a new business source
 
 If the customer has more than one self employment source, they all must have the same accounting method.
 
-## Closing (ceasing) a self-employment sole trader or property business
+### Closing (ceasing) a self-employment sole trader or property business
 
 Self employment and property businesses can be ceased by entering the date the business ended using HMRC online services. However, when ceasing a property business, the customer needs to do this only when they no longer receive any type of rental income from all of their properties. Customers within MTD will be required to submit quarterly updates for the periods up to the date the business ended and any future quarterly obligations will be removed. After a business ceases, customers will not report post-cessation receipts or expenses through subsequent quarterly updates. Additional guidance on their reporting will be provided in due course.
 
@@ -74,7 +79,46 @@ After a business has been updated as ceased, it can be seen almost immediately i
 
 In the future, it will be possible to reopen a closed business or change an incorrectly entered end date.
 
-## Making a Payment
+### Future development
+
+The following tasks are scheduled for future development and we will provide more information about them when available:
+
+- change business details
+- change the amount of a payment on account
+- print a Self Assessment SA302 tax calculation
+- request a budget payment plan
+- request a time to pay
+- provide bank details for future repayments
+- leave MTD as a voluntary customer
+- sign up to MTD as a voluntary customer for those who have previously opted out of MTD
+
+## Pay or get a repayment
+
+Vendors should present messages to business users at key points in their user journey that gives them the option to make payments ahead of any obligation date to help spread the cost. We will deliver functionality that allows vendors to make users aware of payment dates but the payment itself cannot be made through software.
+
+There are multiple ways to make a payment for Self Assessment which can be found on GOV.UK at:
+
+[https://www.gov.uk/pay-self-assessment-tax-bill](https://www.gov.uk/pay-self-assessment-tax-bill)
+
+Vendors should, in their messaging, ask customers to visit that link so the customer can make a payment in the method that suits them.
+
+The contents of this GOV.UK page will be updated and subject to change.
+
+For a business to view the previous payments it has made to HMRC, vendors should present messages at key points in their journey that encourage them to visit their HMRC Online Services account at:
+
+[https://www.tax.service.gov.uk/business-account](https://www.tax.service.gov.uk/business-account)
+
+Vendors in their messaging should ask customers to visit that link.
+
+Customers can pay their tax bills by direct debit, making it easy and convenient to pay. HMRC is delivering functionality for customers to set up direct debit instructions to pay tax when it becomes due. Customers may also set up a regular payment plan to ensure funds are available when tax becomes due. These services will be available when a customer first subscribes to HMRCs tax services, and at any time after a customer has been subscribed through their digital tax account. Access to the services will be via the customer’s digital tax account at:
+
+[https://www.tax.service.gov.uk/personal-account](https://www.tax.service.gov.uk/personal-account)
+
+Vendors in their messaging should ask customers to visit that link.  
+
+Customers will be able to view payments made to HMRC in the software. Details will be updated here after they are available.
+
+## Making a payment
 
 Customers can make a payment towards their liability through HMRC online services or there is an alternative route which is detailed on [Pay your Self Assessment tax bill: Overview - GOV.UK (www.gov.uk)](https://www.gov.uk/pay-self-assessment-tax-bill?_ga=2.87410077.442895640.1693813671-569616403.1678098699&_gl=1*xnov4c*_ga*NTY5NjE2NDAzLjE2NzgwOTg2OTk.*_ga_Y4LWMWY6WS*MTY5NDAxMTU5Ny43LjEuMTY5NDAxMTYwOS4wLjAuMA..). 
 
@@ -100,16 +144,4 @@ The opt out service will not be available through an API. Customers and agents m
 If the customer has submitted updates of business income and expenses (self-employment and/or property) through their software for the tax year they opt out of MTD, these updates will be deleted. The customer or their agent will receive a warning message to inform them that this is going to happen. The total business income and expenses (for the tax year) must then be submitted as part of the customer’s tax return before completing their final declaration.
 
 If a customer is mandated to be in MTD, they will not be eligible to opt out. The opt out service will only be available in HMRC online services for eligible customers.
-
-## Future development
-The following tasks are scheduled for future development and we will provide more information about them when available:
-
-- change business details
-- change the amount of a payment on account
-- print a Self Assessment SA302 tax calculation
-- request a budget payment plan
-- request a time to pay
-- provide bank details for future repayments
-- leave MTD as a voluntary customer
-- sign up to MTD as a voluntary customer for those who have previously opted out of MTD
 
