@@ -1,5 +1,7 @@
 # Overview of the service guide
 
+> **Warning:** This is not an official HMRC document. It is a prototype document for discussion within HMRC.
+
 **Version 3.9** issued March 2024
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd).
