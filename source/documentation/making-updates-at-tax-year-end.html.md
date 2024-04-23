@@ -448,7 +448,7 @@ A customer or agent may contact HMRC if they have a query about a tax decision. 
 
 Under the Construction Industry Scheme (CIS), [contractors](https://www.gov.uk/what-you-must-do-as-a-cis-contractor) deduct money from a [subcontractor's](https://www.gov.uk/what-you-must-do-as-a-cis-subcontractor) payments and send it to HM Revenue and Customs (HMRC). 
 
-Currently, under Self Assessment, a subcontractor submits their deductions on their Self-Assessment return and it is checked against HMRC records with what their contractor(s) have submitted. 
+Currently, under Self Assessment, a subcontractor submits their deductions on their Self Assessment return and it is checked against HMRC records with what their contractor(s) have submitted. 
 
 Under Making Tax Digital for ITSA, a customer can view what has been submitted by their contractor through their HMRC online services account or their software. Customers can complete the following tasks on their CIS deductions:
 
