@@ -41,13 +41,13 @@ jobs:
           cd src/income-tax-mtd-end-to-end-service-guide/build
           if git diff --exit-code --quiet .; then
             echo "No changes found"  
-            echo "::set-output name=changes::false"
+            echo "changes=false" >> "$GITHUB_ENV"
           else
-            echo "::set-output name=changes::true"
+            echo "changes=true" >> "$GITHUB_ENV"
           fi
 
       - name: Retrieve markup files
-        if: steps.check_changes.outputs.changes == 'true'
+        if: steps.check_changes.changes == 'true'
         run: |
           cp -r src/income-tax-mtd-end-to-end-service-guide/build/* dest/P0C-demo.github.io/   
           cd dest/P0C-demo.github.io
