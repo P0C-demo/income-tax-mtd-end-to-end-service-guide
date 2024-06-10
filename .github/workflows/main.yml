@@ -48,7 +48,9 @@ jobs:
           echo steps.check_changes.changes
 
       - name: Retrieve markup files
-        if: steps.check_changes.changes == 'true'
+        env:
+          checks: ${{ steps.check_changes.changes }}
+        if:  checks == 'true'
         run: |
           cp -r src/income-tax-mtd-end-to-end-service-guide/build/* dest/P0C-demo.github.io/   
           cd dest/P0C-demo.github.io
