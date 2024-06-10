@@ -45,12 +45,10 @@ jobs:
           else
             echo "changes=true" >> "$GITHUB_ENV"
           fi
-          echo steps.check_changes.changes
+          echo ${{ steps.check_changes.changes }}
 
       - name: Retrieve markup files
-        env:
-          checks: ${{ steps.check_changes.changes }}
-        if:  checks == 'true'
+        if:  ${{ steps.check_changes.changes }} == 'true'
         run: |
           cp -r src/income-tax-mtd-end-to-end-service-guide/build/* dest/P0C-demo.github.io/   
           cd dest/P0C-demo.github.io
