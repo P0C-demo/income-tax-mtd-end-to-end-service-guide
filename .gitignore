@@ -18,7 +18,13 @@
 .DS_Store
 
 Staticfile.auth
-
+README.md
+TROUBLESHOOTING.md
+api-list.md
+check_links.rb
+/conf
+/config
+/test
 /vendor
 /public
 /target
