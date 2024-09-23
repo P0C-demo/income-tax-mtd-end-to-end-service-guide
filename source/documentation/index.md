@@ -75,9 +75,9 @@ The following end-to-end journey is for a MTD customer with:
 - annual investment allowance
 - business insurance adjustments
 
-<a href="figures/end-to-end.svg" target="blank"><img src="figures/end-to-end.svg" alt="End-to-end customer journey diagram" style="width:720px;" /></a>
+<a href="documentation/figures/end-to-end.svg" target="blank"><img src="documentation/figures/end-to-end.svg" alt="End-to-end customer journey diagram" style="width:720px;" /></a>
 
-<a href="figures/end-to-end.svg" target="blank">Open the end-to-end journey diagram in a new tab.</a>
+<a href="documentation/figures/end-to-end.svg" target="blank">Open the end-to-end journey diagram in a new tab.</a>
 
 1. The customer creates digital records for the new tax year 
 2. The customer checks their obligations for the tax year
