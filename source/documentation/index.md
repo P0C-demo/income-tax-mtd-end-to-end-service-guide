@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 17 September 2024 (see [changelog](#document-changelog))
+> **Preview version 24 September** - this is a preview of upcoming changes to the public MTD service guide to add the [End-to-end customer journey](#end-to-end-customer-journey) section. <br/>To view the current service guide, [go here](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/)
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -66,6 +66,64 @@ The following table lists the documents for Making Tax Digital for Income Tax an
 | [API landing pages](/api-documentation/docs/api?filter=income-tax-mtd) <br /><br />Example:<br/> [Business Details API](/api-documentation/docs/api/service/business-details-api/) | Learn about the high-level functionality of each API. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
 | API reference pages (accessible from API landing pages)<br /><br />Example:<br/> [Business Details API v1.0](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page) | Learn in detail about the request and response schemas, test data and error handling of each API. | Technical | Business analysts<br /><br />Software developers |
 
+## End-to-end customer journey
+
+The following end-to-end journey is for a MTD customer with:
+
+- self-employment income and expenses
+- dividends income
+- annual investment allowance
+- business insurance adjustments
+
+<a href="/figures/end-to-end.svg" target="blank"><img src="/figures/end-to-end.svg" alt="End-to-end customer journey diagram" style="width:720px;" /></a>
+
+<a href="/figures/end-to-end.svg" target="blank">Open the end-to-end journey diagram in a new tab.</a>
+
+1. The customer creates digital records for the new tax year 
+2. The customer checks their obligations for the tax year
+3. The software calls the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint to retrieve the business ID
+4. The software uses the business ID to call the [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) endpoint to retrieve the customer obligations
+5. HMRC receives the request and returns the obligations
+6. The software displays the obligations 
+7. The customer views their obligations 
+8. The software prepares summary of Quarter 1 income and expenses and displays it to the customer
+9. The customer reviews the information and begins their Quarter 1 submission process
+10. The software initiates the data submission process by calling [Create a Self-Employment Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/3.0/oas/page#tag/Self-Employment-Period-Summaries) endpoint
+11. HMRC receives receives the submission and updates records
+12. The software displays the confirmation that the update has been received and stored by HMRC
+13. The customer views the confirmation
+14. The customer makes Quarter 2,3,4 submission (same steps as Q1)
+15. The customer begins the submission of their allowances 
+16. The software calls the [Create and Amend Self-Employment Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/3.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put) endpoint to submit the allowances
+17. HMRC receives the allowances and updates records
+18. The software displays the confirmation of the update
+19. The customers views the confirmation
+20. The customer needs to make an accounting adjustment to adjust part of their current year expense to the next tax year
+21. The customer makes adjustments to business insurance in their digital records
+22. The customer begins the submission of these adjustments to HMRC
+23. The software calls the [Submit Self-Employment Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D~1adjust/post) endpoint to submit the adjustments
+24. HMRC receives the adjustments and updates records
+25. The software displays the confirmation of the update
+26. The customers views the confirmation
+27. The customer begins the submission of their dividends income
+28. The software calls the [Create and Amend Dividends Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/1.0/oas/page#tag/Dividends-Income/paths/~1individuals~1dividends-income~1%7Bnino%7D~1%7BtaxYear%7D/put) endpoint to submit their savings income
+29. HMRC receives the submission and updates records
+30. The software displays the confirmation of the update
+31. The customers views the confirmation
+32. The customer is ready to make their final declaration
+33. The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint with finalDeclaration parameter as true
+34. HMRC receives the request, starts tax calculation and returns calculation ID
+35. HMRC generates final declaration tax calculation (converts any business validation warnings into errors)
+36. The software receives calculation ID
+37. The software calls the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint using calculation ID
+38. HMRC returns the tax calculation with the requested calculation ID
+39. The software receives tax calculation results if call is successful (if there are errors, it cannot be viewed)
+40. The customer views final tax calculation results
+41. The customer reviews and confirms the calculation and declaration text 
+42. The software receives confirmation and calls the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to confirm calculation
+43. HMRC receives the submission and marks the obligation as fulfilled 
+44. The software displays the confirmation of the submission (HMRC does not do this)
+45. The customer views confirmation that the return has been submitted successfully to HMRC
 
 ## Changelogs
 
